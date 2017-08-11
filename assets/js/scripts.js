@@ -21,3 +21,28 @@ if (typeof jQuery === 'undefined') {
   console.log('jQuery has loaded');
 }
 // Place any jQuery/helper plugins in here.
+
+$(function() {
+  // set the same haight to aside and article
+  // set submenu height
+  var articleHeight = $('article').height();
+  var asideHeight = $('aside').height();
+  if (articleHeight > asideHeight) {
+    $('aside').height(articleHeight);
+    $('.aside-nav--submenu').height(articleHeight);
+  } else {
+    $('article').height(asideHeight);
+    $('.aside-nav--submenu').height(articleHeight);
+  }
+  $('.aside-nav > ul > li > a').on('click', function(e) {
+    console.log('click')
+    if ($(this).parent().hasClass('aside-nav--active')) {
+      $(this).parent().removeClass('aside-nav--active')
+    } else if (!$(this).parent().hasClass('aside-nav--active') && $(this).parent().hasClass('aside-nav--haschild')) {
+      $('.aside-nav--active').removeClass('aside-nav--active');
+      $(this).parent().addClass('aside-nav--active')
+    }
+
+  })
+
+});

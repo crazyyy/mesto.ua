@@ -20,7 +20,7 @@ $base-line-height: 1.1;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$width: 980px;
+$width: 1200px;
 $footer: 50px;
 $footer_margin: $footer - 2 * $footer;
 $base-border-radius: 3px;
@@ -29,6 +29,7 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
+$black: #303030;
 $orange: orange;
 $red: red;
 $blue: #477dca;
@@ -37,7 +38,7 @@ $gray-dark: #333;
 $gray-light: #ddd;
 
 // Font Colors
-$base-font-color: $gray-dark;
+$base-font-color: $black;
 $action-color: $blue;
 
 // Border
@@ -45,7 +46,7 @@ $base-border-color: $gray-light;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: #f5f5f7;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Box Shadows
